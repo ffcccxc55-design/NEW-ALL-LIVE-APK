@@ -1,0 +1,6 @@
+{
+  "name": "All Live",
+  "description": "প্রিমিয়াম লাইভ স্ট্রিমিং ও লিংক গেটওয়ে পোর্টাল (All Live Premium Link Gateway and Streaming Portal)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
