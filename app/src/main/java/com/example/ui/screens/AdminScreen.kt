@@ -18,17 +18,20 @@ import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import com.example.data.model.AppConfig
 import com.example.data.model.Channel
 import com.example.data.model.NotificationBanner
 import com.example.data.model.PremiumItem
 import com.example.ui.components.GlassCard
-import com.example.ui.components.SyncState
 import com.example.ui.components.TwilightBackground
 import com.example.ui.theme.*
 import com.example.ui.viewmodel.AppViewModel
+import com.example.ui.viewmodel.SyncState
 
 @Composable
 fun AdminScreen(

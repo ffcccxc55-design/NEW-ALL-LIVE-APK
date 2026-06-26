@@ -118,17 +118,16 @@ fun ShimmerBanner(
     val scrollState = rememberScrollState()
     
     // Auto scroll the banner text horizontally for scrolling marquee effect
-    LaunchedEffect(text) {
-        while (true) {
-            scrollState.animateTo(
-                value = scrollState.maxValue,
-                animationSpec = infiniteRepeatable(
-                    animation = tween(durationMillis = 12000, easing = LinearEasing),
-                    repeatMode = RepeatMode.Restart
+    LaunchedEffect(text, scrollState.maxValue) {
+        if (scrollState.maxValue > 0) {
+            while (true) {
+                scrollState.scrollTo(0)
+                scrollState.animateScrollTo(
+                    value = scrollState.maxValue,
+                    animationSpec = tween(durationMillis = 12000, easing = LinearEasing)
                 )
-            )
-            scrollState.scrollTo(0)
-            delay(1000)
+                kotlinx.coroutines.delay(1000)
+            }
         }
     }
 

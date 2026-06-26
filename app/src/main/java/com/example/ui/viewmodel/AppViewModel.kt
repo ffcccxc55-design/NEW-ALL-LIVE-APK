@@ -303,6 +303,12 @@ class AppViewModel(
             repository.deleteNotification(notification)
         }
     }
+
+    fun deleteFeedback(feedback: Feedback) {
+        viewModelScope.launch {
+            repository.deleteFeedback(feedback)
+        }
+    }
 }
 
 class AppViewModelFactory(
